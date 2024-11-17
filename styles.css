@@ -1,0 +1,76 @@
+/* Created by Tivotal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.loader::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #2a9d8f;
+  border-radius: 50%;
+  left: 45px;
+  bottom: 30px;
+  animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+.loader::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 7px;
+  /*   background: #fff; */
+  border-radius: 4px;
+  right: 0;
+  top: 0;
+  box-shadow: 0 5px 0 #fff, -35px 50px 0 #fff, -70px 95px 0 #fff;
+  animation: steps 1s ease-in-out infinite;
+}
+
+@keyframes steps {
+  0% {
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0), 0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2;
+  }
+  100% {
+    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2,
+      -70px 90px 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 0.7);
+  }
+
+  40% {
+    transform: scale(0.8, 1.2);
+  }
+
+  60% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    bottom: 140px;
+  }
+}
