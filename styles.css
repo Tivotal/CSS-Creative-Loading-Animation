@@ -30,7 +30,8 @@ body {
   border-radius: 50%;
   left: 45px;
   bottom: 30px;
-  animation: bounce 0.5s ease-in-out infinite alternate;
+  animation: bounce 0.5s ease-in-out 
+             infinite alternate;
 }
 
 .loader::after {
@@ -42,18 +43,25 @@ body {
   border-radius: 4px;
   right: 0;
   top: 0;
-  box-shadow: 0 5px 0 #fff, -35px 50px 0 #fff, -70px 95px 0 #fff;
-  animation: steps 1s ease-in-out infinite;
+  box-shadow: 0 5px 0 #fff, 
+              -35px 50px 0 #fff, 
+              -70px 95px 0 #fff;
+  animation: steps 1s ease-in-out 
+             infinite;
 }
 
 @keyframes steps {
   0% {
-    box-shadow: 0 10px 0 rgba(0, 0, 0, 0), 0 10px 0 #f2f2f2,
-      -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0), 
+                0 10px 0 #f2f2f2,
+                -35px 50px 0 #f2f2f2, 
+                -70px 90px 0 #f2f2f2;
   }
   100% {
-    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2,
-      -70px 90px 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 10px 0 #f2f2f2, 
+                -35px 50px 0 #f2f2f2, 
+                -70px 90px 0 #f2f2f2,
+                -70px 90px 0 rgba(0, 0, 0, 0);
   }
 }
 
